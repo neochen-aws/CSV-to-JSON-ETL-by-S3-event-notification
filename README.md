@@ -12,6 +12,7 @@
 
 ## lambda function for CSV to JSON
 1. create a lmabda function with below setting, and click create
+![](image/twm3.png)
 2. paste code below, you would need to replace targetbuck and csv key to your own bucket and object keyname
 
 ```python
@@ -60,3 +61,6 @@ def lambda_handler(event, context):
 	![](image/twm2.png)
 
 3. upload the sample csv, you can download it [here](https://twmworkshop-neochen.s3.amazonaws.com/LOAD00000001.csv), and see the result. 
+
+## Glue for data catalog and ETL
+Instructor led hands on
