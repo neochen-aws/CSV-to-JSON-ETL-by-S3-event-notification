@@ -1,6 +1,6 @@
 
 ## Architecture overview
-![](image/twm1.png)
+![](image/twm4.png)
 
 ## create S3 bucket
 1. in s3 console click create bucket, select the region you want and provide a name
