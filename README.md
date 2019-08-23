@@ -63,4 +63,7 @@ def lambda_handler(event, context):
 3. upload the sample csv, you can download it [here](https://twmworkshop-neochen.s3.amazonaws.com/LOAD00000001.csv), and see the result. 
 
 ## Glue for data catalog and ETL
-Instructor led hands on
+1. please share your account id for instructor
+2. create 1 cloud9 environment in us-east-1, and execute command 'aws s3 sync s3://dmslabstudent-dmslabs3bucket-1dlsit7mkodjy s3://<your-bucket>'
+3. create a iam role for glue to use later, you would need to attach managed policy 'AWSGlueServiceRole' and 'AmazonS3FullAccess' 
+4. start glue crawler setup
