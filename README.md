@@ -1,16 +1,16 @@
-# serverless analytic workshop 
+# Serverless Analytic Workshop 
 ## Architecture overview
 ![](image/twm4.png)
 
-## create S3 bucket
+## Create S3 bucket
 1. in s3 console click create bucket, select the region you want and provide a name
 
-## lambda permission setup
+## Lambda permission setup
 1. in IAM console, click roles -> create role
 2. in 'create role' console, select 'lambda' and click 'next: permission'
 3. in 'Attach permissions policies', select AmazonS3FullAccess for the ease of the workshop. skip tag and give this role a name.
 
-## lambda function for CSV to JSON
+## Lambda function for CSV to JSON
 1. create a lmabda function with below setting, and click create
 ![](image/twm3.png)
 2. paste code below, you would need to replace targetbuck and csv key to your own bucket and object keyname
@@ -62,7 +62,7 @@ def lambda_handler(event, context):
 
 3. upload the sample csv, you can download it [here](https://twmworkshop-neochen.s3.amazonaws.com/LOAD00000001.csv), and see the result. 
 
-## database preparation
+## Database preparation
 1. please share your account id for instructor
 2. create 1 cloud9 environment in us-east-1, and execute command 'aws s3 sync s3://dmslabstudent-dmslabs3bucket-1dlsit7mkodjy s3://<your-bucket>', the source datrabase 
 3. create a iam role for glue to use later, you would need to attach managed policy 'AWSGlueServiceRole' and 'AmazonS3FullAccess' 
