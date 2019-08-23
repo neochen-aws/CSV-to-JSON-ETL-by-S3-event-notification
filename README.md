@@ -5,7 +5,7 @@
 ## create S3 bucket
 1. in s3 console click create bucket, select the region you want and provide a name
 
-##lambda permission setup
+## lambda permission setup
 1. in IAM console, click roles -> create role
 2. in 'create role' console, select 'lambda' and click 'next: permission'
 3. in 'Attach permissions policies', select AmazonS3FullAccess for the ease of the workshop. skip tag and give this role a name.
@@ -52,6 +52,8 @@ def lambda_handler(event, context):
     	Key=jsonkey
     )
 ```
+4. click save, you can test the lambda by creating a test event that use the s3 event notification format, please refer to [here](https://docs.aws.amazon.com/AmazonS3/latest/dev/notification-content-structure.html)
+
 ## S3 event notification configuration
 1. in s3 console, select your bucket and select 'propoties'
 2. in 'event' click add notification
